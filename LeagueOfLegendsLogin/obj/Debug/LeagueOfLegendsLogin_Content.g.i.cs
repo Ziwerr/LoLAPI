@@ -8,14 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_bronze.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_challenger.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_diamond.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_gold.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_grandmaster.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_iron.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_master.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_platinium.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/icon_silver.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logo.png")]
 
 

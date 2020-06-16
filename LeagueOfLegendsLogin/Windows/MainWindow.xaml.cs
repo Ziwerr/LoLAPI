@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
+﻿using RiotSharp.Misc;
+using System;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LeagueOfLegendsLogin.Windows
 {
@@ -23,6 +12,7 @@ namespace LeagueOfLegendsLogin.Windows
     {
         Controller controller;
         ViewModel viewModel;
+
         public MainWindow()
         {
             controller = new Controller();
@@ -49,5 +39,26 @@ namespace LeagueOfLegendsLogin.Windows
                 MessageBox.Show("Not Found");
             }
         }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btn_Website_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://leagueoflegends.com");
+        }
+
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
     }
 }

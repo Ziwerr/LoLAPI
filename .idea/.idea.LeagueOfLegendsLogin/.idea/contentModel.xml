@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\barto\.Rider2019.3\config\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\barto\.Rider2019.3\config\extensions" t="IncludeRecursive" />
+    <e p="C:\Users\barto\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\barto\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_LeagueOfLegendsLogin.922574408.00" t="ExcludeRecursive" />
+    <e p="C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin" t="IncludeFlat">
+      <e p="LeagueOfLegendsLogin" t="IncludeRecursive">
+        <e p="Api" t="Include">
+          <e p="ChampionAPI.cs" t="Include" />
+          <e p="LeaderBoardAPI.cs" t="Include" />
+          <e p="LeagueAPI.cs" t="Include" />
+          <e p="RiotAPI.cs" t="Include" />
+          <e p="SummonerAPI.cs" t="Include" />
+        </e>
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controller.cs" t="Include" />
+        <e p="ControllerChampions.cs" t="Include" />
+        <e p="ControllerLeaderBoards.cs" t="Include" />
+        <e p="ControllerSummoner.cs" t="Include" />
+        <e p="Images" t="Include">
+          <e p="Icons_Rank" t="Include">
+            <e p="Bronze.png" t="Include" />
+            <e p="Challanger.png" t="Include" />
+            <e p="Diamond.png" t="Include" />
+            <e p="Gold.png" t="Include" />
+            <e p="Grandmaster.png" t="Include" />
+            <e p="Iron.png" t="Include" />
+            <e p="Master.png" t="Include" />
+            <e p="Platinium.png" t="Include" />
+            <e p="Silver.png" t="Include" />
+          </e>
+          <e p="logo.png" t="Include" />
+        </e>
+        <e p="LeagueOfLegendsLogin.csproj" t="IncludeRecursive" />
+        <e p="Model" t="Include">
+          <e p="ChampionInfo.cs" t="Include" />
+          <e p="LeaderBoard.cs" t="Include" />
+          <e p="LeagueEntryDTO.cs" t="Include" />
+          <e p="SummonerDTO.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="App.g.cs" t="Include" />
+            <e p="GeneratedInternalTypeHelper.g.cs" t="Include" />
+            <e p="Windows" t="Include">
+              <e p="MainWindow.g.cs" t="Include" />
+              <e p="UserControl1.g.cs" t="Include" />
+              <e p="WindowSummoner.g.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Summoner.cs" t="Include" />
+        <e p="ViewModel" t="Include">
+          <e p="ViewModel.cs" t="Include" />
+          <e p="ViewModelChampions.cs" t="Include" />
+          <e p="ViewModelLeaderBoard.cs" t="Include" />
+          <e p="ViewModelSummoner.cs" t="Include" />
+        </e>
+        <e p="Windows" t="Include">
+          <e p="MainWindow.xaml" t="Include" />
+          <e p="MainWindow.xaml.cs" t="Include" />
+          <e p="UserControl1.xaml" t="Include" />
+          <e p="UserControl1.xaml.cs" t="Include" />
+          <e p="WindowSummoner.xaml" t="Include" />
+          <e p="WindowSummoner.xaml.cs" t="Include" />
+        </e>
+      </e>
+      <e p="LeagueOfLegendsLogin.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

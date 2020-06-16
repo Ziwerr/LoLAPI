@@ -1,9 +1,5 @@
 ﻿using LeagueOfLegendsLogin.Windows;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeagueOfLegendsLogin
 {
@@ -11,22 +7,22 @@ namespace LeagueOfLegendsLogin
     {
         public object GetContextFromSummoner()
         {
-            var summoner = Constans.Summoner;
+            var summoner = Summoner.Sum;
 
             var entry = GetEntry(summoner);
 
-            return new ViewModelSummoner(summoner.Name,summoner.ProfileIconId,summoner.SummonerLevel, entry.Tier,entry.Rank,entry.Wins,entry.Losses);
+            return new ViewModelSummoner(summoner.Name,summoner.ProfileIconId,summoner.SummonerLevel, entry.Tier, entry.Rank, entry.Wins, entry.Losses);
         }
 
         private LeagueEntryDTO GetEntry(SummonerDTO summoner)
         {
-            LeagueAPI leagueAPI = new LeagueAPI(Constans.Reg);
+            LeagueAPI leagueAPI = new LeagueAPI(Summoner.Reg);
 
             var entrys = leagueAPI.GetEntrys(summoner.Id)
                          .Where(x=>x.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
-
             return entrys ?? new LeagueEntryDTO();
         }
+
 
         public void OpenMain()
         {

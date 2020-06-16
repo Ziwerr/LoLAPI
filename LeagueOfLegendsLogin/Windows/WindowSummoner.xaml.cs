@@ -32,5 +32,29 @@ namespace LeagueOfLegendsLogin.Windows
             controllerSummoner.OpenMain();
             this.Close();
         }
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btn_Minimize_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btn_Website_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://leagueoflegends.com");
+        }
+
+        private void btn_Historia_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btn_Ranking_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

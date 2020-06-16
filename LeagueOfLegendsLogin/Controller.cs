@@ -10,12 +10,9 @@ namespace LeagueOfLegendsLogin
     {
         public bool GetSummoner(string summonerName)
         {
-            SummonerAPI summonerAPI = new SummonerAPI(Constans.Reg);
-
+            SummonerAPI summonerAPI = new SummonerAPI(Summoner.Reg);
             var summoner = summonerAPI.GetSummonerByName(summonerName);
-
-            Constans.Summoner = summoner;
-
+            Summoner.Sum = summoner;
             return summoner != null;
         }
     }

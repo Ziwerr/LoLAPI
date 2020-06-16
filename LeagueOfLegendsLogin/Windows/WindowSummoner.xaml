@@ -6,48 +6,74 @@
         xmlns:local="clr-namespace:LeagueOfLegendsLogin.Windows"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
-        Height="600" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF410A66">
-    <Grid>
+        Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF410A66">
+        
+        <Grid>
+        <DockPanel FlowDirection="RightToLeft" Width="1000" Height="40" VerticalAlignment="Top">
+            <Button Margin="2,0,2,0" Foreground="Azure" x:Name="btn_Exit" Click="btnExit_Click" Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionButton}">
+                <materialDesign:PackIcon Kind="power"></materialDesign:PackIcon>
+            </Button>
+            <Button Margin="2,0,2,0" x:Name="btn_Minimize" Click="btn_Minimize_Click" Foreground="Azure" HorizontalAlignment="Left" Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionButton}">
+                <materialDesign:PackIcon Kind="WindowMinimize"></materialDesign:PackIcon>
+            </Button>
+            <Button Margin="2,0,0,0" x:Name="btn_Website" Click="btn_Website_Click" Foreground="Azure" HorizontalAlignment="Left" Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionButton}">
+                <materialDesign:PackIcon Kind="Web"></materialDesign:PackIcon>
+            </Button>
+        </DockPanel>
+        <Grid Width="400" HorizontalAlignment="Left">
         <Border Background="White" Margin="20 100 20 20" CornerRadius="15">
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+                <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
                     <Border Width="100" Height="100" Margin="20 20 0 10" BorderBrush="DarkGray" HorizontalAlignment="Left" BorderThickness="1" CornerRadius="15">
                         <Border.Background>
                             <ImageBrush ImageSource="{Binding Path=Icon}"/>
                         </Border.Background>
                     </Border>
-                <TextBlock Margin="20 15" FontSize="30" Text="{Binding Path=SummonerName}" Foreground="DarkGray"/>
-                <StackPanel Orientation="Horizontal" Margin="20 5">
-                    <StackPanel Margin="15" HorizontalAlignment="Center">
-                        <TextBlock Text="WIN" FontSize="15" FontWeight="Bold" Foreground="Green"/>
-                        <TextBlock Text="{Binding Path=Wins}" FontSize="15" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center"/>
+                    <TextBlock Margin="20 15" FontSize="30" Text="{Binding Path=SummonerName}" Foreground="DarkGray"/>
+                    <StackPanel Orientation="Horizontal" Margin="20 5">
+                        <StackPanel Margin="15" HorizontalAlignment="Center">
+                            <TextBlock Text="WIN" FontSize="15" FontWeight="Bold" Foreground="Green"/>
+                            <TextBlock Text="{Binding Path=Wins}" FontSize="15" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Margin="15" HorizontalAlignment="Center">
+                            <TextBlock Text="LOSSES" FontSize="15" FontWeight="Bold" Foreground="Red"/>
+                            <TextBlock Text="{Binding Path=Losses}" FontSize="15" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center"/>
+                        </StackPanel>
                     </StackPanel>
-                    <StackPanel Margin="15" HorizontalAlignment="Center">
-                        <TextBlock Text="LOSSES" FontSize="15" FontWeight="Bold" Foreground="Red"/>
-                        <TextBlock Text="{Binding Path=Looses}" FontSize="15" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center"/>
+                    <StackPanel Margin="30">
+                        <TextBlock Text="LEVEL" FontSize="15" Foreground="Black"/>
+                        <TextBlock Text="{Binding Path=Level}" FontSize="45" Foreground="Gray" HorizontalAlignment="Center"/>
                     </StackPanel>
+                    <Grid Margin="20 0">
+                        <Button HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="100">
+                            <materialDesign:PackIcon Kind="Search" Width="26" Height="26"/>
+                        </Button>
+                        <Button HorizontalAlignment="Right" Width="100" Content="LOGIN"></Button>
+                    </Grid>
                 </StackPanel>
-                <StackPanel Margin="30">
-                    <TextBlock Text="LEVEL" FontSize="15" Foreground="LightGray"/>
-                    <TextBlock Text="{Binding Path=Level}" FontSize="45" Foreground="Gray" HorizontalAlignment="Center"/>
+            </Border>
+            <StackPanel HorizontalAlignment="Right" Margin="30 10">
+                <Image Source="{Binding Path=RankedIcon}" Width="200" Height="200">
+                    <Image.Effect>
+                        <DropShadowEffect BlurRadius="200" ShadowDepth="1"/>
+                    </Image.Effect>
+                </Image>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                    <TextBlock FontWeight="Bold" FontSize="15" Foreground="Gray" Text="{Binding Path=Tier}" VerticalAlignment="Center" Margin="5"/>
+                    <TextBlock FontWeight="Bold" FontSize="15" Foreground="Gray" Text="{Binding Path=Rank}" Margin="5"/>
                 </StackPanel>
-                <Grid Margin="20 0">
-                    <Button HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="100">
-                    <materialDesign:PackIcon Kind="Search" Width="26" Height="26"/>
-                    </Button>
-                    <Button HorizontalAlignment="Right" Width="100" Content="LOGIN"></Button>
-                </Grid>
             </StackPanel>
-        </Border>
-        <StackPanel HorizontalAlignment="Right" Margin="30 10">
-            <Image Source="{Binding Path=RankedIcon}" Width="200" Height="200">
-                <Image.Effect>
-                    <DropShadowEffect BlurRadius="200" ShadowDepth="1"/>
-                </Image.Effect>
-            </Image>
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
-                <TextBlock FontWeight="Bold" FontSize="15" Foreground="Gray" Text="{Binding Path=Tier}" VerticalAlignment="Center" Margin="5"/>
-                <TextBlock FontWeight="Bold" FontSize="15" Foreground="Gray" Text="{Binding Path=Rank}" Margin="5"/>
+        </Grid>
+
+        <Grid Width="600" HorizontalAlignment="Right">
+            <StackPanel Height="100" Width="600" Orientation="Horizontal" VerticalAlignment="Top"> 
+                <Button x:Name="btn_Historia" Click="btn_Historia_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Historia meczy"/>
+                <Button x:Name="btn_Ranking" Click="btn_Ranking_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Ranking"/>
             </StackPanel>
-        </StackPanel>
+            <Border Background="White" Margin="20 100 20 20" CornerRadius="15">
+                <local:UserControl1></local:UserControl1>
+            </Border>
+        </Grid>
+            
     </Grid>
+
 </Window>

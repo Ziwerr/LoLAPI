@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\barto\source\repos\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\
 LeagueOfLegendsLogin
 none
 false
 DEBUG;TRACE
-C:\Users\barto\source\repos\LeagueOfLegendsLogin\LeagueOfLegendsLogin\App.xaml
-21524901348
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\App.xaml
+3533451528
 
-17-2030729383
-18-1360089223
-Windows\MainWindow.xaml;Windows\WindowSummoner.xaml;
+252121061094
+129938628360
+Windows\MainWindow.xaml;Windows\UserControl1.xaml;Windows\WindowSummoner.xaml;
 
-False
+True
 
