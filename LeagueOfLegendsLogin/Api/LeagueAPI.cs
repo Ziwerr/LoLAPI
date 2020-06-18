@@ -1,12 +1,8 @@
-﻿using Newtonsoft.Json;
+﻿using LeagueOfLegendsLogin.Models;
 using RestSharp;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LeagueOfLegendsLogin
+namespace LeagueOfLegendsLogin.Api
 {
     public class LeagueAPI : MainAPI
     {
@@ -18,9 +14,9 @@ namespace LeagueOfLegendsLogin
             RestClient client = new RestClient($"https://{Region}.api.riotgames.com/lol/");
             var request = new RestRequest($"league/v4/entries/by-summoner/{summonerId}?api_key={Key}", Method.GET);
             var response = client.Execute<List<LeagueEntryDTO>>(request);
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (response.IsSuccessful)
             {
-                return JsonConvert.DeserializeObject<List<LeagueEntryDTO>>(response.Content);
+                return response.Data;
             }
             else
             {

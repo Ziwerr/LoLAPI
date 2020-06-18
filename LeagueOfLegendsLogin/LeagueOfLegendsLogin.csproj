@@ -203,19 +203,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Api\ChampionAPI.cs" />
     <Compile Include="Api\LeaderBoardAPI.cs" />
     <Compile Include="Api\MatchesAPI.cs" />
-    <Compile Include="Controller.cs" />
-    <Compile Include="ControllerLeaderBoard.cs" />
-    <Compile Include="ControllerMatches.cs" />
-    <Compile Include="Api\LeagueAPI.cs" />
+    <Compile Include="Controllers\Controller.cs" />
+    <Compile Include="Controllers\ControllerLeaderBoard.cs" />
+    <Compile Include="Controllers\ControllerMatches.cs" />
     <Compile Include="Converters\UnixToTimeConverter.cs" />
-    <Compile Include="Model\LeaderBoard.cs" />
-    <Compile Include="Model\LeagueEntryDTO.cs" />
-    <Compile Include="Model\MatchlistDTO.cs" />
+    <Compile Include="Api\LeagueAPI.cs" />
+    <Compile Include="Models\Champion.cs" />
+    <Compile Include="Models\LeaderBoard.cs" />
+    <Compile Include="Models\LeagueEntryDTO.cs" />
+    <Compile Include="Models\MatchlistDTO.cs" />
     <Compile Include="Summoner.cs" />
     <Compile Include="Api\MainAPI.cs" />
-    <Compile Include="Model\SummonerDTO.cs" />
+    <Compile Include="Models\SummonerDTO.cs" />
     <Compile Include="Api\SummonerAPI.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLeaderBoard.cs" />

@@ -1,14 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using LeagueOfLegendsLogin.Models;
 using RestSharp;
-using RestSharp.Extensions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Compilation;
-using System.Web.UI.WebControls;
-using System.Windows;
 
 namespace LeagueOfLegendsLogin
 {
@@ -23,9 +14,9 @@ namespace LeagueOfLegendsLogin
             RestClient client = new RestClient($"https://{Region}.api.riotgames.com/lol/");
             var request = new RestRequest($"summoner/v4/summoners/by-name/{SummonerName}?api_key={Key}", Method.GET);
             var response = client.Execute<SummonerDTO>(request);
-            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            if(response.IsSuccessful)
             {
-                return JsonConvert.DeserializeObject<SummonerDTO>(response.Content);
+                return response.Data;
             }
             return null;
         }

@@ -1,16 +1,11 @@
-﻿using LeagueOfLegendsLogin.Model;
-using Newtonsoft.Json;
+﻿using LeagueOfLegendsLogin.Models;
 using RestSharp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeagueOfLegendsLogin.Api
 {
     public class MatchesAPI : MainAPI
     {
+        private static readonly string CHAMPION_URL = "http://ddragon.leagueoflegends.com/cdn/10.12.1/data/en_US/champion.json";
         public MatchesAPI(string region) : base(region)
         {
         }
@@ -20,9 +15,10 @@ namespace LeagueOfLegendsLogin.Api
             RestClient client = new RestClient($"https://{Region}.api.riotgames.com/lol/");
             var request = new RestRequest($"match/v4/matchlists/by-account/{accountId}?api_key={Key}", Method.GET);
             var response = client.Execute<MatchlistDTO>(request);
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
+            if (response.IsSuccessful)
             {
-                return JsonConvert.DeserializeObject<MatchlistDTO>(response.Content);
+                var champion = ChampionAPI.GetChampions();
+                return response.Data;
             }
             else
             {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace LeagueOfLegendsLogin
+namespace LeagueOfLegendsLogin.Models
 {
     public class SummonerDTO
     {

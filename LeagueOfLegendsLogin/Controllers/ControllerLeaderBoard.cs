@@ -1,10 +1,7 @@
 ﻿using LeagueOfLegendsLogin.Api;
-using LeagueOfLegendsLogin.Model;
-using System;
+using LeagueOfLegendsLogin.Models;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeagueOfLegendsLogin
 {
