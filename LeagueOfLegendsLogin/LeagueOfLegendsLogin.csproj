@@ -206,22 +206,26 @@
     <Compile Include="Api\LeaderBoardAPI.cs" />
     <Compile Include="Api\MatchesAPI.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="ControllerLeaderBoard.cs" />
     <Compile Include="ControllerMatches.cs" />
-    <Compile Include="ControllerSummoner.cs" />
     <Compile Include="Api\LeagueAPI.cs" />
     <Compile Include="Converters\UnixToTimeConverter.cs" />
     <Compile Include="Model\LeaderBoard.cs" />
     <Compile Include="Model\LeagueEntryDTO.cs" />
     <Compile Include="Model\MatchlistDTO.cs" />
     <Compile Include="Summoner.cs" />
-    <Compile Include="Api\RiotAPI.cs" />
+    <Compile Include="Api\MainAPI.cs" />
     <Compile Include="Model\SummonerDTO.cs" />
     <Compile Include="Api\SummonerAPI.cs" />
     <Compile Include="ViewModel\ViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLeaderBoard.cs" />
     <Compile Include="ViewModel\ViewModelMatches.cs" />
     <Compile Include="ViewModel\ViewModelSummoner.cs" />
     <Compile Include="Windows\UserControl1.xaml.cs">
       <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\WindowSummoner.xaml.cs">
       <DependentUpon>WindowSummoner.xaml</DependentUpon>
@@ -239,6 +243,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\UserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\UserControl2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

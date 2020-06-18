@@ -5,11 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LeagueOfLegendsLogin.Windows"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:uc="clr-namespace:LeagueOfLegendsLogin.Windows"
+        FontFamily="David"
+        FontSize="15"
         mc:Ignorable="d"
         Height="600" Width="1000" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Background="#FF410A66">
         
-        <Grid>
-        <DockPanel FlowDirection="RightToLeft" Width="1000" Height="40" VerticalAlignment="Top">
+        <Grid MouseLeftButtonDown="Grid_MouseLeftButtonDown">
+        <DockPanel FlowDirection="RightToLeft" Width="1000" Height="30" VerticalAlignment="Top">
             <Button Margin="2,0,2,0" Foreground="Azure" x:Name="btn_Exit" Click="btnExit_Click" Width="25" Height="25" Style="{StaticResource MaterialDesignFloatingActionButton}">
                 <materialDesign:PackIcon Kind="power"></materialDesign:PackIcon>
             </Button>
@@ -21,7 +24,15 @@
             </Button>
         </DockPanel>
         <Grid Width="400" HorizontalAlignment="Left">
-        <Border Background="White" Margin="20 100 20 20" CornerRadius="15">
+            <StackPanel Margin="20,10,0,0" HorizontalAlignment="Left">
+                <Image Source="/Images/logo.png" Width="130" Height="80">
+                    <Image.Effect>
+                        <DropShadowEffect ShadowDepth="5"/>
+                    </Image.Effect>
+                </Image>
+            </StackPanel>
+           
+            <Border Background="WhiteSmoke" Margin="20 100 20 20" CornerRadius="15">
                 <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
                     <Border Width="100" Height="100" Margin="20 20 0 10" BorderBrush="DarkGray" HorizontalAlignment="Left" BorderThickness="1" CornerRadius="15">
                         <Border.Background>
@@ -47,7 +58,7 @@
                         <Button HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="100">
                             <materialDesign:PackIcon Kind="Search" Width="26" Height="26"/>
                         </Button>
-                        <Button HorizontalAlignment="Right" Width="100" Content="LOGIN"></Button>
+                        <Button HorizontalAlignment="Right" Width="100" Content="LOGIN" Click="ButtonSearch_Click"></Button>
                     </Grid>
                 </StackPanel>
             </Border>
@@ -69,8 +80,11 @@
                 <Button x:Name="btn_Historia" Click="btn_Historia_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Historia meczy"/>
                 <Button x:Name="btn_Ranking" Click="btn_Ranking_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Ranking"/>
             </StackPanel>
-            <Border Background="White" Margin="20 100 20 20" CornerRadius="15">
-                <local:UserControl1></local:UserControl1>
+            <Border Background="WhiteSmoke" CornerRadius="15" Margin="20,100,20,20" Padding="15">
+            <Grid>
+                    <local:UserControl1 x:Name="UserHistory"></local:UserControl1>
+                    <local:UserControl2 x:Name="UserLeaderBoard"></local:UserControl2>
+            </Grid>
             </Border>
         </Grid>
             

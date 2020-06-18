@@ -61,4 +61,6 @@ C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\bin\D
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\Windows\UserControl1.g.cs
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\Windows\UserControl1.baml
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\Windows\UserControl2.g.cs
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\Windows\UserControl2.baml
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\LeagueOfLegendsLogin.csprojAssemblyReference.cache

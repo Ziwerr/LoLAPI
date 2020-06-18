@@ -11,17 +11,12 @@ namespace LeagueOfLegendsLogin
     public class ViewModelMatches
     {
         ControllerMatches controllerMatches = new ControllerMatches();
-        public List<MatchRefernceDto> Matches 
-        { 
-            get 
+        public List<MatchRefernceDto> Matches
+        {
+            get
             {
                 return controllerMatches.GetMatches();
-            } 
+            }
         }
-        public string Role { get; set; }
-        public int Season { get; set; }
-        public string Lane { get; set; }
-        public long Timestamp { get; set; }
-        
     }
 }

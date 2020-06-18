@@ -15,5 +15,13 @@ namespace LeagueOfLegendsLogin
             Summoner.Sum = summoner;
             return summoner != null;
         }
+        public LeagueEntryDTO GetEntry(SummonerDTO summoner)
+        {
+            LeagueAPI leagueAPI = new LeagueAPI(Summoner.Reg);
+            var entrys = leagueAPI.GetEntrys(summoner.Id)
+                         .Where(x => x.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
+            return entrys;
+        }
+
     }
 }

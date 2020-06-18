@@ -19,18 +19,23 @@ namespace LeagueOfLegendsLogin.Windows
     /// </summary>
     public partial class WindowSummoner : Window
     {
-        ControllerSummoner controllerSummoner;
+        ViewModelSummoner modelSummoner;
         public WindowSummoner()
         {
             InitializeComponent();
-            controllerSummoner = new ControllerSummoner();
-            DataContext = controllerSummoner.GetContextFromSummoner();
+            modelSummoner = new ViewModelSummoner();
+            DataContext = modelSummoner;
+        }
+        public void OpenMain()
+        {
+            MainWindow profile = new MainWindow();
+            profile.Show();
         }
 
         private void ButtonSearch_Click(object sender, RoutedEventArgs e)
         {
-            controllerSummoner.OpenMain();
-            this.Close();
+            OpenMain();
+            Close();
         }
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
@@ -49,12 +54,26 @@ namespace LeagueOfLegendsLogin.Windows
 
         private void btn_Historia_Click(object sender, RoutedEventArgs e)
         {
-            
+            UserHistory.Visibility = System.Windows.Visibility.Visible;
+            UserLeaderBoard.Visibility = System.Windows.Visibility.Hidden;
+            btn_Historia.BorderBrush = new SolidColorBrush(Colors.Orange);
+            btn_Historia.BorderThickness = new Thickness(2);
+            btn_Ranking.BorderBrush = null;
+
         }
 
         private void btn_Ranking_Click(object sender, RoutedEventArgs e)
         {
+            UserHistory.Visibility = System.Windows.Visibility.Hidden;
+            UserLeaderBoard.Visibility = System.Windows.Visibility.Visible;
+            btn_Historia.BorderBrush = null;
+            btn_Ranking.BorderBrush = new SolidColorBrush(Colors.Orange);
+            btn_Ranking.BorderThickness = new Thickness(2);
 
+        }
+        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

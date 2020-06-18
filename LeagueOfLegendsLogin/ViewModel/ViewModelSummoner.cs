@@ -9,26 +9,70 @@ namespace LeagueOfLegendsLogin
 {
     public class ViewModelSummoner
     {
-        public string SummonerName { get; set; }
-        public string Icon { get; set; }
-        public long Level { get; set; }
-        public string Tier { get; set; }
-        public string Rank { get; set; }
-        public string RankedIcon { get; set; }
-        public int Wins { get; set; }
-        public int Losses { get; set; }
+        Controller controller = new Controller();
 
-        public ViewModelSummoner(string summonerName, int icon, long level, string tier, string rank, int wins, int losses)
+        public LeagueEntryDTO League
         {
-            SummonerName = summonerName;
-            Icon = "http://opgg-static.akamaized.net/images/profile_icons/profileIcon" + icon + ".jpg";
-            Level = level;
-            Tier = tier;
-            Rank = rank;
-            RankedIcon = "/LeagueOfLegendsLogin;component/Images/Icons_Rank/" + tier + ".png";
-            Wins = wins;
-            Losses = losses;
+            get
+            {
+                return controller.GetEntry(Summoner.Sum);
+            }
         }
-
+        public string SummonerName
+        {
+            get
+            {
+                return Summoner.Sum.Name;
+            }
+        }
+        public string Icon
+        {
+            get
+            {
+                return "http://opgg-static.akamaized.net/images/profile_icons/profileIcon" + Summoner.Sum.ProfileIconId + ".jpg";
+            }
+        }
+        public long Level
+        {
+            get
+            {
+                return Summoner.Sum.SummonerLevel;
+            }
+        }
+        public string Tier
+        {
+            get
+            {
+                return League.Tier;
+            }
+        }
+        public string Rank
+        {
+            get
+            {
+                return League.Rank;
+            }
+        }
+        public string RankedIcon
+        {
+            get
+            {
+                return "/LeagueOfLegendsLogin;component/Images/Icons_Rank/" + League.Tier + ".png";
+            }
+        }
+        public int Wins
+        {
+            get
+            {
+                return League.Wins;
+            }
+        }
+        public int Losses
+        {
+            get
+            {
+                return League.Losses;
+            }
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using LeagueOfLegendsLogin.Model;
 using Newtonsoft.Json;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,30 +13,15 @@ namespace LeagueOfLegendsLogin.Api
     public class LeaderBoardAPI
     {
         public string Region { get; set; } = "europe";
-        public string Key { get; set; } = "RGAPI-25b5ba29-edd8-4b91-ada4-947ac0b2d4ab";
-        protected HttpResponseMessage GET(string URL)
-        {
-            using (HttpClient client = new HttpClient())
-            {
-                var result = client.GetAsync(URL);
-                result.Wait();
-
-                return result.Result;
-            }
-        }
-        protected string GetURI(string path)
-        {
-            return "https://" + Region + ".api.riotgames.com/lor/" + path + "?api_key=" + Key;
-        }
-
+        public string Key { get; set; } = "RGAPI-493a9309-54bf-4e34-8156-15d4550c27da";
         public LeaderBoard GetPlayers()
         {
-            string path = "ranked/v1/leaderboards";
-            var response = GET(GetURI(path));
-            string content = response.Content.ReadAsStringAsync().Result;
+            RestClient client = new RestClient($"https://{Region}.api.riotgames.com/lor/");
+            var request = new RestRequest($"ranked/v1/leaderboards?api_key={Key}", Method.GET);
+            var response = client.Execute<LeaderBoard>(request);
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                return JsonConvert.DeserializeObject<LeaderBoard>(content);
+                return JsonConvert.DeserializeObject<LeaderBoard>(response.Content);
             }
             else
             {

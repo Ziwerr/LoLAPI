@@ -12,7 +12,7 @@ namespace LeagueOfLegendsLogin
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string info)
         {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            PropertyChanged(this, new PropertyChangedEventArgs(info));
         }
         string region;
         public string Region

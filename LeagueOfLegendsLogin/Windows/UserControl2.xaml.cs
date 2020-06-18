@@ -16,16 +16,18 @@ using System.Windows.Shapes;
 namespace LeagueOfLegendsLogin.Windows
 {
     /// <summary>
-    /// Logika interakcji dla klasy UserControl1.xaml
+    /// Logika interakcji dla klasy UserControl2.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class UserControl2 : UserControl
     {
-        ViewModelMatches modelMatches;
-        public UserControl1()
+        ViewModelLeaderBoard modelLeaderBoard;
+
+        public UserControl2()
         {
+            modelLeaderBoard = new ViewModelLeaderBoard();
             InitializeComponent();
-            modelMatches = new ViewModelMatches();
-            DataContext = modelMatches;
+            DataContext = modelLeaderBoard;
         }
+
     }
 }

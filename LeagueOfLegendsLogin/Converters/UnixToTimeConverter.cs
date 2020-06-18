@@ -16,7 +16,7 @@ namespace LeagueOfLegendsLogin.Converters
         {
             if (value is long v && targetType == typeof(string))
             {
-                return epoch.AddSeconds(v);
+                return epoch.AddMilliseconds(v);
             }
             return null;
         }

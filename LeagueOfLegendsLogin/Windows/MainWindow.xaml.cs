@@ -39,6 +39,13 @@ namespace LeagueOfLegendsLogin.Windows
                 MessageBox.Show("Not Found");
             }
         }
+        protected override void OnMouseLeftButtonDown(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonDown(e);
+
+            // Begin dragging the window
+            this.DragMove();
+        }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
@@ -55,7 +62,7 @@ namespace LeagueOfLegendsLogin.Windows
             System.Diagnostics.Process.Start("http://leagueoflegends.com");
         }
 
-        private void Grid_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        private void DockPanel_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }

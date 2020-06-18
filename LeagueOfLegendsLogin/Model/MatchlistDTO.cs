@@ -15,6 +15,8 @@ namespace LeagueOfLegendsLogin.Model
         public string Role { get; set; }
         public int Season { get; set; }
         public string Lane{ get; set; }
-        public long Timestamp { get; set; } 
+        public long Timestamp { get; set; }
+        public int Champion { get; set; }
+        public int Queue { get; set; }
     }
 }
