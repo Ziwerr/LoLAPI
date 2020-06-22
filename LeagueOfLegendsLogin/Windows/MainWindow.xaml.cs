@@ -1,7 +1,6 @@
-﻿using RiotSharp.Misc;
-using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Input;
+
 
 namespace LeagueOfLegendsLogin.Windows
 {
@@ -24,11 +23,16 @@ namespace LeagueOfLegendsLogin.Windows
         private void btn_Search_Click(object sender, RoutedEventArgs e)
         {
             if (string.IsNullOrEmpty(viewModel.Region))
+            {
                 return;
+            }
+            
             if (string.IsNullOrEmpty(viewModel.SummonerName))
+            {
                 return;
+            }
 
-            if(controller.GetSummoner(viewModel.SummonerName))
+            if (controller.GetSummoner(viewModel.SummonerName))
             {
                 WindowSummoner windowSummoner = new WindowSummoner();
                 windowSummoner.Show();

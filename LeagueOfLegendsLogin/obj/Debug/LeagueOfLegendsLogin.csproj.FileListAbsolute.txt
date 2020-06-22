@@ -64,3 +64,7 @@ C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\D
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\Windows\UserControl2.g.cs
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\Windows\UserControl2.baml
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\LeagueOfLegendsLogin.csprojAssemblyReference.cache
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\bin\Debug\LeagueOfLegendsLogin.exe.manifest
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\bin\Debug\LeagueOfLegendsLogin.application
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\LeagueOfLegendsLogin.exe.manifest
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\LeagueOfLegendsLogin.application

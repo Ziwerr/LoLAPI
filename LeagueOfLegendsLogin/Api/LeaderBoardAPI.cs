@@ -6,12 +6,12 @@ namespace LeagueOfLegendsLogin.Api
     public class LeaderBoardAPI
     {
         public string Region { get; set; } = "europe";
-        public string Key { get; set; } = "RGAPI-6086db84-d3a2-461b-95f9-70d7e314f070";
-        public LeaderBoard GetPlayers()
+        MainAPI mainAPI = new MainAPI(Summoner.Reg);
+        public LeaderBoardDTO GetPlayers()
         {
             RestClient client = new RestClient($"https://{Region}.api.riotgames.com/lor/");
-            var request = new RestRequest($"ranked/v1/leaderboards?api_key={Key}", Method.GET);
-            var response = client.Execute<LeaderBoard>(request);
+            var request = new RestRequest($"ranked/v1/leaderboards?api_key={mainAPI.Key}", Method.GET);
+            var response = client.Execute<LeaderBoardDTO>(request);
             if (response.IsSuccessful)
             {
                 return response.Data;

@@ -1,5 +1,4 @@
-﻿
-using LeagueOfLegendsLogin.Models;
+﻿using LeagueOfLegendsLogin.Models;
 
 namespace LeagueOfLegendsLogin
 {
@@ -21,6 +20,7 @@ namespace LeagueOfLegendsLogin
                 return Summoner.Sum.Name;
             }
         }
+     
         public string Icon
         {
             get
@@ -68,6 +68,13 @@ namespace LeagueOfLegendsLogin
             get
             {
                 return League.Losses;
+            }
+        }
+        public string QueueType
+        {
+            get
+            {
+                return League.QueueType;
             }
         }
     }

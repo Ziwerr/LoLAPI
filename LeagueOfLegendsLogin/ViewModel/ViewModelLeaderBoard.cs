@@ -7,7 +7,8 @@ namespace LeagueOfLegendsLogin
     {
         ControllerLeaderBoard controllerLeaderBoard = new ControllerLeaderBoard();
         public List<PlayerDTO> LeaderBoards
-        { get
+        { 
+            get
             {
                 return controllerLeaderBoard.GetLeaderBoards();
             } 

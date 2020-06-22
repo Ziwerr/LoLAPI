@@ -5,11 +5,10 @@ namespace LeagueOfLegendsLogin.Api
 {
     public class MatchesAPI : MainAPI
     {
-        private static readonly string CHAMPION_URL = "http://ddragon.leagueoflegends.com/cdn/10.12.1/data/en_US/champion.json";
+        //private static readonly string CHAMPION_URL = "http://ddragon.leagueoflegends.com/cdn/10.12.1/data/en_US/champion.json";
         public MatchesAPI(string region) : base(region)
         {
         }
-
         public MatchlistDTO GetMatches(string accountId)
         {
             RestClient client = new RestClient($"https://{Region}.api.riotgames.com/lol/");
@@ -17,7 +16,6 @@ namespace LeagueOfLegendsLogin.Api
             var response = client.Execute<MatchlistDTO>(request);
             if (response.IsSuccessful)
             {
-                var champion = ChampionAPI.GetChampions();
                 return response.Data;
             }
             else

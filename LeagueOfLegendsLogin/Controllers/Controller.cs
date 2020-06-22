@@ -17,7 +17,7 @@ namespace LeagueOfLegendsLogin
         {
             LeagueAPI leagueAPI = new LeagueAPI(Summoner.Reg);
             var entrys = leagueAPI.GetEntrys(summoner.Id)
-                         .Where(x => x.QueueType.Equals("RANKED_SOLO_5x5")).FirstOrDefault();
+                         .Where(x => x.QueueType.Equals("RANKED_SOLO_5x5")).First();
             return entrys;
         }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace LeagueOfLegendsLogin
-{
+{ 
     public class ViewModelMatches
     {
         ControllerMatches controllerMatches = new ControllerMatches();

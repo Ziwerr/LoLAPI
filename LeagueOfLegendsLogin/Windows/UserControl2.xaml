@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding LeaderBoards}" x:Name="LeaderBoard" Background="{StaticResource MaterialDesignChipBackground}" Style="{StaticResource MaterialDesignDataGrid}"  SelectionUnit="Cell" CanUserDeleteRows="False" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto">
+        <DataGrid ItemsSource="{Binding LeaderBoards}" x:Name="LeaderBoard" Background="{StaticResource MaterialDesignChipBackground}" Style="{StaticResource MaterialDesignDataGrid}"  SelectionUnit="Cell" CanUserDeleteRows="False" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto" IsReadOnly="True" CanUserResizeColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Rank" Binding="{Binding Rank}"/>

@@ -15,9 +15,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Linia" Binding="{Binding Lane}"/>
                 <DataGridTextColumn Header="Sezon" Binding="{Binding Season}"/>
-                <DataGridTextColumn Header="Kolejka" Binding="{Binding Queue}"/>
-                <DataGridTextColumn Header="Bohater"/>
-                <DataGridTextColumn Header="Data" Binding="{Binding Timestamp, StringFormat={}{0:yyyy-MM-dd HH:mm}, Converter={StaticResource UnixToTimeConverter}}"/>
+                <DataGridTextColumn Header="Data" Binding="{Binding Timestamp, StringFormat={}{0:dd-MM-yyyy HH:mm}, Converter={StaticResource UnixToTimeConverter}}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

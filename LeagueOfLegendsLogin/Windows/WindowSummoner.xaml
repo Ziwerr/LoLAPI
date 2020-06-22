@@ -49,6 +49,11 @@
                             <TextBlock Text="LOSSES" FontSize="15" FontWeight="Bold" Foreground="Red"/>
                             <TextBlock Text="{Binding Path=Losses}" FontSize="15" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center"/>
                         </StackPanel>
+                        <StackPanel Margin="15" HorizontalAlignment="Center">
+                            <TextBlock Text="Queue Type" FontSize="15" FontWeight="Bold" Foreground="Turquoise"/>
+                            <TextBlock Text="{Binding Path=QueueType}" FontSize="15" FontWeight="Bold" Foreground="Gray" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        
                     </StackPanel>
                     <StackPanel Margin="30">
                         <TextBlock Text="LEVEL" FontSize="15" Foreground="Black"/>
@@ -58,7 +63,7 @@
                         <Button HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFlatButton}" Width="100">
                             <materialDesign:PackIcon Kind="Search" Width="26" Height="26"/>
                         </Button>
-                        <Button HorizontalAlignment="Right" Width="100" Content="LOGIN" Click="ButtonSearch_Click"></Button>
+                        <Button HorizontalAlignment="Right" Width="100" Content="Login" Click="ButtonSearch_Click"></Button>
                     </Grid>
                 </StackPanel>
             </Border>
@@ -77,12 +82,12 @@
 
         <Grid Width="600" HorizontalAlignment="Right">
             <StackPanel Height="100" Width="600" Orientation="Horizontal" VerticalAlignment="Top"> 
-                <Button x:Name="btn_Historia" Click="btn_Historia_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Historia meczy"/>
-                <Button x:Name="btn_Ranking" Click="btn_Ranking_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Ranking"/>
+                <Button x:Name="btn_Historia" Click="btn_Historia_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Match History"/>
+                <Button x:Name="btn_Ranking" Click="btn_Ranking_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Leaderboard"/>
             </StackPanel>
             <Border Background="WhiteSmoke" CornerRadius="15" Margin="20,100,20,20" Padding="15">
             <Grid>
-                    <local:UserControl1 x:Name="UserHistory"></local:UserControl1>
+                    <local:UserControl1 x:Name="UserHistory" ></local:UserControl1>
                     <local:UserControl2 x:Name="UserLeaderBoard"></local:UserControl2>
             </Grid>
             </Border>

@@ -7,6 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
         BorderBrush="Black"
+        FontFamily="David"
         BorderThickness="3"
         Height="600" Width="400" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="#FF410A66" Visibility="Visible" AllowsTransparency="True">
     <Grid>
@@ -22,7 +23,6 @@
             </Button>
         </DockPanel>
         <Border Margin="20 45" CornerRadius="15" Background="WhiteSmoke" BorderBrush="black" BorderThickness="3">
-
             <StackPanel Margin="25">
                 <Image Source="/Images/logo.png" Width="300" Height="80">
                     <Image.Effect>

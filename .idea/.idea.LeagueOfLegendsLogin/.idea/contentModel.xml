@@ -11,17 +11,22 @@
           <e p="ChampionAPI.cs" t="Include" />
           <e p="LeaderBoardAPI.cs" t="Include" />
           <e p="LeagueAPI.cs" t="Include" />
-          <e p="RiotAPI.cs" t="Include" />
+          <e p="MainAPI.cs" t="Include" />
+          <e p="MatchesAPI.cs" t="Include" />
           <e p="SummonerAPI.cs" t="Include" />
         </e>
         <e p="App.config" t="Include" />
         <e p="App.xaml" t="Include" />
         <e p="App.xaml.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controller.cs" t="Include" />
-        <e p="ControllerChampions.cs" t="Include" />
-        <e p="ControllerLeaderBoards.cs" t="Include" />
-        <e p="ControllerSummoner.cs" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="Controller.cs" t="Include" />
+          <e p="ControllerLeaderBoard.cs" t="Include" />
+          <e p="ControllerMatches.cs" t="Include" />
+        </e>
+        <e p="Converters" t="Include">
+          <e p="UnixToTimeConverter.cs" t="Include" />
+        </e>
         <e p="Images" t="Include">
           <e p="Icons_Rank" t="Include">
             <e p="Bronze.png" t="Include" />
@@ -37,10 +42,11 @@
           <e p="logo.png" t="Include" />
         </e>
         <e p="LeagueOfLegendsLogin.csproj" t="IncludeRecursive" />
-        <e p="Model" t="Include">
-          <e p="ChampionInfo.cs" t="Include" />
+        <e p="Models" t="Include">
+          <e p="Champion.cs" t="Include" />
           <e p="LeaderBoard.cs" t="Include" />
           <e p="LeagueEntryDTO.cs" t="Include" />
+          <e p="MatchlistDTO.cs" t="Include" />
           <e p="SummonerDTO.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -50,6 +56,7 @@
             <e p="Windows" t="Include">
               <e p="MainWindow.g.cs" t="Include" />
               <e p="UserControl1.g.cs" t="Include" />
+              <e p="UserControl2.g.cs" t="Include" />
               <e p="WindowSummoner.g.cs" t="Include" />
             </e>
           </e>
@@ -65,8 +72,8 @@
         <e p="Summoner.cs" t="Include" />
         <e p="ViewModel" t="Include">
           <e p="ViewModel.cs" t="Include" />
-          <e p="ViewModelChampions.cs" t="Include" />
           <e p="ViewModelLeaderBoard.cs" t="Include" />
+          <e p="ViewModelMatches.cs" t="Include" />
           <e p="ViewModelSummoner.cs" t="Include" />
         </e>
         <e p="Windows" t="Include">
@@ -74,6 +81,8 @@
           <e p="MainWindow.xaml.cs" t="Include" />
           <e p="UserControl1.xaml" t="Include" />
           <e p="UserControl1.xaml.cs" t="Include" />
+          <e p="UserControl2.xaml" t="Include" />
+          <e p="UserControl2.xaml.cs" t="Include" />
           <e p="WindowSummoner.xaml" t="Include" />
           <e p="WindowSummoner.xaml.cs" t="Include" />
         </e>

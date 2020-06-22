@@ -10,7 +10,7 @@ namespace LeagueOfLegendsLogin
         public List<PlayerDTO> GetLeaderBoards()
         {
             LeaderBoardAPI leaderBoardAPI = new LeaderBoardAPI();
-            var board = leaderBoardAPI.GetPlayers().Players.Take(100).ToList();
+            var board = leaderBoardAPI.GetPlayers().Players.OrderBy(x=>x.Rank).Take(99).ToList();
             return board;
         }
     }
