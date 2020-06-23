@@ -7,7 +7,7 @@
         public MainAPI(string region)
         {
             Region = region;
-            Key = "RGAPI-8ae59e14-6f06-4c70-9ec5-4d63945d0fdb";
+            Key = "RGAPI-d879fdf0-282a-4bb2-a256-499ce4a37c77";
         }
     }
 }

@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/icons_rank/platinum.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("viewmodel/fodyweavers.xml")]
 
 

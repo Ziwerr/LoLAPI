@@ -77,5 +77,7 @@ namespace LeagueOfLegendsLogin
                 return League.QueueType;
             }
         }
+
+
     }
 }

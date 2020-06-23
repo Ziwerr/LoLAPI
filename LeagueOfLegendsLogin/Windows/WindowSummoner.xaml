@@ -84,6 +84,7 @@
             <StackPanel Height="100" Width="600" Orientation="Horizontal" VerticalAlignment="Top"> 
                 <Button x:Name="btn_Historia" Click="btn_Historia_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Match History"/>
                 <Button x:Name="btn_Ranking" Click="btn_Ranking_Click" Style="{DynamicResource MaterialDesignFlatDarkBgButton}" Margin="20,30,2,0" Width="130" Height="50" HorizontalAlignment="Left" Content="Leaderboard"/>
+                <TextBlock Style="{DynamicResource MaterialDesignBody1TextBlock}" Background="{StaticResource MaterialDesignBodyLight}" Width="130" Height="20" Margin="150,30,2,0" TextAlignment="Center">czas</TextBlock>
             </StackPanel>
             <Border Background="WhiteSmoke" CornerRadius="15" Margin="20,100,20,20" Padding="15">
             <Grid>

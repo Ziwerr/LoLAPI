@@ -68,3 +68,4 @@ C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\bin\D
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\bin\Debug\LeagueOfLegendsLogin.application
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\LeagueOfLegendsLogin.exe.manifest
 C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\LeagueOfLegendsLogin.application
+C:\Users\barto\Desktop\ProjektP4\LeagueOfLegendsLogin\LeagueOfLegendsLogin\obj\Debug\LeagueOfLegendsLogin.csproj.Fody.CopyLocal.cache

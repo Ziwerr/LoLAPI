@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LeagueOfLegendsLogin.exe" size="3173856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="LeagueOfLegendsLogin.exe" size="3174368">
       <assemblyIdentity name="LeagueOfLegendsLogin" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WhlMpKnWL08xz/MK1ANc13zfbU8NjlnyGSiiRsCBy68=</dsig:DigestValue>
+        <dsig:DigestValue>OJ+F+f6iUz/fXImdEvXAkZZxiRhKQM9XZ27JnxvQTyI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
